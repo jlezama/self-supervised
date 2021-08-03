@@ -1,9 +1,9 @@
 from .contrastive import Contrastive
 from .w_mse import WMSE
 from .byol import BYOL
+from .missl import MISSL
 
-
-METHOD_LIST = ["contrastive", "w_mse", "byol"]
+METHOD_LIST = ["contrastive", "w_mse", "byol", "missl"]
 
 
 def get_method(name):
@@ -14,3 +14,8 @@ def get_method(name):
         return WMSE
     elif name == "byol":
         return BYOL
+    elif name == "missl":
+        return MISSL
+
+
+
